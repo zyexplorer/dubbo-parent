@@ -1,8 +1,8 @@
 package com.iask.dubboconsumer.dubboservice;
 
 import com.alibaba.dubbo.config.annotation.Reference;
+import com.iask.dubboapi.service.mongo.FlowDoctorBlackService;
 import com.iask.dubboapi.service.mysql.UserService;
-import com.wenwo.platform.flow.IFlowDoctorBlackService;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -20,5 +20,5 @@ public class DubboService {
     UserService userService;
 
     @Reference
-    IFlowDoctorBlackService flowDoctorBlackService;
+    FlowDoctorBlackService flowDoctorBlackService;
 }

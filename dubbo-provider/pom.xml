@@ -51,13 +51,6 @@
             <version>2.1.1</version>
         </dependency>
 
-        <!--爱问依赖-->
-        <dependency>
-            <groupId>com.wenwo.platform</groupId>
-            <artifactId>wenwo-platform-utils-mongo</artifactId>
-            <version>4.1.0-SNAPSHOT</version>
-        </dependency>
-
     </dependencies>
 
     <build>
