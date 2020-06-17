@@ -1,4 +1,4 @@
-package com.iask.dubbocommon.entity;
+package com.iask.dubbocommon.entity.mysql;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

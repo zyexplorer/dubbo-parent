@@ -1,8 +1,6 @@
 package com.iask.dubboconsumer.controller;
 
-import com.alibaba.dubbo.config.annotation.Reference;
-import com.iask.dubboapi.service.UserService;
-import com.iask.dubbocommon.entity.User;
+import com.iask.dubbocommon.entity.mysql.User;
 import com.iask.dubboconsumer.dubboservice.DubboService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,7 +23,7 @@ public class UserController {
 
     @GetMapping("/{id}")
     public User getUserById(@PathVariable("id") Integer id) {
-        log.info("前端请求参数：{}", id);
+        log.info("查询mysql库入参：{}", id);
         return dubboService.getUserService().getUserById(id);
     }
 

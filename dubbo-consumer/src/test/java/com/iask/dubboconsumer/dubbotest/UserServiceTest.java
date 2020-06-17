@@ -1,8 +1,8 @@
 package com.iask.dubboconsumer.dubbotest;
 
 import com.alibaba.dubbo.config.annotation.Reference;
-import com.iask.dubboapi.service.UserService;
-import com.iask.dubbocommon.entity.User;
+import com.iask.dubboapi.service.mysql.UserService;
+import com.iask.dubbocommon.entity.mysql.User;
 import com.iask.dubboconsumer.DubboConsumerApplicationTests;
 import org.junit.jupiter.api.Test;
 

@@ -39,6 +39,12 @@
             <version>5.2.7.RELEASE</version>
         </dependency>
 
+        <!--引入爱问平台api-->
+        <dependency>
+            <groupId>com.wenwo.customer</groupId>
+            <artifactId>wenwo-platform-customer-api</artifactId>
+            <version>4.0.0-RELEASE</version>
+        </dependency>
 
     </dependencies>
 
