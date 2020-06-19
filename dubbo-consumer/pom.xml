@@ -33,12 +33,6 @@
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-web</artifactId>
-            <version>5.2.7.RELEASE</version>
-        </dependency>
-
         <!--引入爱问平台api-->
 <!--        <dependency>-->
 <!--            <groupId>com.wenwo.customer</groupId>-->
@@ -47,8 +41,9 @@
 <!--        </dependency>-->
 
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-mongodb</artifactId>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>5.2.7.RELEASE</version>
         </dependency>
 
     </dependencies>

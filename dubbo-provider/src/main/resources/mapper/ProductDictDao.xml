@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.iask.dubboapi.dao.mysql.ProductDictDao">
+
+    <resultMap type="com.iask.dubbocommon.entity.mysql.ProductDict" id="ProductDictMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="productName" column="product_name" jdbcType="VARCHAR"/>
+        <result property="productCode" column="product_code" jdbcType="VARCHAR"/>
+        <result property="belongEnd" column="belong_end" jdbcType="INTEGER"/>
+        <result property="platform" column="platform" jdbcType="INTEGER"/>
+        <result property="operateSystem" column="operate_system" jdbcType="INTEGER"/>
+        <result property="domains" column="domains" jdbcType="VARCHAR"/>
+        <result property="pageType" column="page_type" jdbcType="INTEGER"/>
+        <result property="h5Type" column="h5_type" jdbcType="INTEGER"/>
+        <result property="delFlag" column="del_flag" jdbcType="INTEGER"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+        <result property="remark" column="remark" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="ProductDictMap">
+        select
+          id, product_name, product_code, belong_end, platform, operate_system, domains, page_type, h5_type, del_flag, create_time, update_time, remark
+        from t_product_dict
+        limit #{offset}, #{limit}
+    </select>
+
+    <select id="queryById" resultMap="ProductDictMap">
+        select * from t_product_dict where id = #{id}
+    </select>
+
+</mapper>

@@ -4,8 +4,6 @@ import com.alibaba.dubbo.config.annotation.Reference;
 import com.iask.dubboapi.service.mongo.FlowDoctorBlackService;
 import com.iask.dubboconsumer.DubboConsumerApplicationTests;
 import org.junit.jupiter.api.Test;
-import org.springframework.data.mongodb.core.query.Criteria;
-import org.springframework.data.mongodb.core.query.Query;
 
 import java.util.List;
 

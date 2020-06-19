@@ -13,6 +13,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>dubbo-parent</name>
     <description>父工程管理各模块及依赖</description>
+    <packaging>pom</packaging>
 
     <modules>
         <module>dubbo-provider</module>
@@ -92,6 +93,13 @@
             <artifactId>fastjson</artifactId>
             <version>1.2.70</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>20.0</version>
+        </dependency>
+
     </dependencies>
 
     <build>
