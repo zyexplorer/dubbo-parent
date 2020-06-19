@@ -4,6 +4,11 @@ import java.util.Date;
 import java.io.Serializable;
 import lombok.Data;
 import lombok.Builder;
+import tk.mybatis.mapper.annotation.KeySql;
+
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
@@ -22,6 +27,9 @@ public class ProductDict implements Serializable {
     /**
     * 表主键ID 产品ID
     */
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @KeySql(useGeneratedKeys = true)
     private Integer id;
 
     /**

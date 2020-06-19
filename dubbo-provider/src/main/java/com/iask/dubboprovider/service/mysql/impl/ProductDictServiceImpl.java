@@ -28,6 +28,8 @@ public class ProductDictServiceImpl implements ProductDictService {
      */
     @Override
     public ProductDict queryById(Integer id) {
+        ProductDict productDict = productDictDao.selectByPrimaryKey(id);
+        System.out.println(productDict);
         return this.productDictDao.queryById(id);
     }
 

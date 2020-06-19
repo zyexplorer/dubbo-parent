@@ -1,10 +1,13 @@
 package com.iask.dubboapi.dao.mysql;
 
 import com.iask.dubbocommon.entity.mysql.ProductDict;
-import org.apache.ibatis.annotations.Param;
-import java.util.List;
+
+
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import tk.mybatis.mapper.common.Mapper;
+
+import java.util.List;
 
 /**
  * 产品清单表 产品清单表(ProductDict)表数据库访问层

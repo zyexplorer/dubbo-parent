@@ -46,6 +46,12 @@
             <version>5.2.7.RELEASE</version>
         </dependency>
 
+        <!--mysql驱动依赖-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>
