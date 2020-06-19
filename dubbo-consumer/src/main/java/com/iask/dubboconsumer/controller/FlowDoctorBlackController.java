@@ -1,12 +1,12 @@
 package com.iask.dubboconsumer.controller;
 
-import com.alibaba.dubbo.config.annotation.Reference;
-import com.iask.dubboapi.service.mongo.FlowDoctorBlackService;
+import com.iask.dubboconsumer.dubboservice.DubboService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -21,13 +21,13 @@ import java.util.List;
 @RequestMapping("/flow")
 public class FlowDoctorBlackController {
 
-    @Reference
-    FlowDoctorBlackService flowDoctorBlackService;
+    @Resource
+    private DubboService dubboService;
 
     @GetMapping("/findDisabledDocIds")
     public List<String> testFindDisabledDocIds(String publishDocId) {
         log.info("查询mongo库入参：{}", publishDocId);
-        return flowDoctorBlackService.finddisabledDocIds(publishDocId);
+        return dubboService.getFlowDoctorBlackService().finddisabledDocIds(publishDocId);
     }
 
 }
